@@ -1,0 +1,38 @@
+.slider {
+  /* default is width 400 and margin 10 */
+	width: 400;
+	margin: 10px;
+}
+
+.context_image {
+    width: 500px;
+    height: 402px;
+}
+
+div.wrapper div {
+    display: inline-block;
+}
+       
+.set {
+    width: 100px;
+    height: 300px; 
+    }
+
+.progress {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    margin-right: -133;
+}
+
+.slide {
+    padding-top: 36px;
+}
+
+.dot_image {
+    padding-top: 50px;
+}
+
+.long_form {
+    padding-top: 20px;
+}
