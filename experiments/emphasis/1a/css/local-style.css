@@ -4,6 +4,26 @@
 	padding-top: 25px;
 }
 
+.parent {
+  text-align: center;
+}
+.parent > ul {
+  display: inline-block;
+	text-align:left;
+	margin-top: -20px;
+	margin-bottom: 0px;
+}
+
+.textstyle {
+    background-color: #99ff99; /* Changing background color */
+		display: inline-block;
+    font-weight: bold; /* Making font bold */
+    border-radius: 20px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 10px 30px 10px 30px; /* Making space around letters */
+}
+
 .mellow {
 	align-content: center;
 	max-width: 100;
@@ -29,7 +49,6 @@
 	padding-left: 25px;
 	padding-right: 25px;
 	padding-bottom: 25px;
-	padding-top: 25px;
 }
 
 .slider {

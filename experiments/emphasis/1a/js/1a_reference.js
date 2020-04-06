@@ -1,3 +1,5 @@
+var t1, t2;
+
 var utterance = ["amb", "surface", "inverse"]
 
 function make_slides(f) {
@@ -45,6 +47,7 @@ function make_slides(f) {
 
 
         present_handle: function(stim) {
+          t1 = new Date();
 
           $(".sentence").html("\""+stim[exp.condition]+"\"");
 
@@ -70,8 +73,11 @@ function make_slides(f) {
               return function() {
                 $(".picture").unbind("click");
                 $(".picture").empty();
+                t2 = new Date();
+                var rt = Math.round((t2.getTime() - t1.getTime())/100)/10;
                 exp.data_trials.push({
                   "choice": choice,
+                  "rt": rt,
                   //"choice": $(this).attr('id'),
                   "utterance": stim.utterance,
                   "modifier": exp.condition
