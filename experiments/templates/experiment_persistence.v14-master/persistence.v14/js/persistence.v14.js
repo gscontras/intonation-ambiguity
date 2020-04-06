@@ -4,7 +4,7 @@ var context = ["regular","random"]
 
 function show_image_2(image) {
     $("#machine").html(image);
-    };  
+    };
 
 function make_slides(f) {
   var   slides = {};
@@ -29,14 +29,14 @@ function make_slides(f) {
       }
       show_image_2(image);
 
-    }, 
+    },
     button : function() {
         exp.go()
     }
   });
 
 
-  
+
   slides.instructions2 = slide({
       name : "instructions2",
       start: function() {
@@ -44,9 +44,9 @@ function make_slides(f) {
       $(".scenario2_condition").html("After moving a shipment of boxes, Cubert tells his friend, Dot, about the boxes he moved. Your task is to help Dot decide what Cubert meant.");
       }
       else {
-       $(".scenario2_condition").html("After inspecting a shipment of boxes, Cubert tells his friend, Dot, about the boxes he inspected. Your task is to help Dot decide what Cubert meant."); 
+       $(".scenario2_condition").html("After inspecting a shipment of boxes, Cubert tells his friend, Dot, about the boxes he inspected. Your task is to help Dot decide what Cubert meant.");
       }
-      }, 
+      },
       button : function() {
         exp.go(); //use exp.go() if and only if there is no "present" data.
       }
@@ -58,7 +58,7 @@ function make_slides(f) {
 
 
       present: _.shuffle([ {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -66,7 +66,7 @@ function make_slides(f) {
                 "utterance": "big"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -74,7 +74,7 @@ function make_slides(f) {
                 "utterance": "big"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -82,7 +82,7 @@ function make_slides(f) {
                 "utterance": "big"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -90,7 +90,7 @@ function make_slides(f) {
                 "utterance": "heavy"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -98,7 +98,7 @@ function make_slides(f) {
                 "utterance": "heavy"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -106,7 +106,7 @@ function make_slides(f) {
                 "utterance": "heavy"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -114,7 +114,7 @@ function make_slides(f) {
                 "utterance": "tall"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
@@ -122,15 +122,15 @@ function make_slides(f) {
                 "utterance": "tall"
                              },
                              {
-                "coll_list":                                        
+                "coll_list":
                 [{w:  60  , h:  60 }, {w:  60, h:  60  }, {w:  60 , h:  60  }, {w:  60  , h:  60  }, {w:  60  , h:  60 }],
                 "dist_list":
                 [{w:  0  , h:  0  }, {w:  60  , h:  120  }, {w:  0 , h:  0  }, {w:  60  , h:  120  }, {w:  0  , h:  0  }],
                 "disambiguator": "",
                 "utterance": "tall"
-                             },                                        
+                             },
       ]),
-      
+
 
       present_handle: function(stim) {
 
@@ -153,10 +153,10 @@ function make_slides(f) {
             var box = paper.rect(coords[j].x, coords[j].y, dims.w, dims.h).attr({fill: colors[i], stroke: '#000', 'stroke-width': 2});
           }
           $("#" + label).hover(function(){
-                              $(this).fadeTo(10,0.5);   
+                              $(this).fadeTo(10,0.5);
                               },
                               function(){
-                              $(this).fadeTo(10,1);       
+                              $(this).fadeTo(10,1);
                               });
           $('#' + label).click(function(choice) {
             return function() {
@@ -185,8 +185,8 @@ function make_slides(f) {
       } //use exp.go() if and only if there is no "present" data.
     });
 
- 
-  
+
+
 
 
 
@@ -243,7 +243,7 @@ function init() {
     };
 
   exp.structure=["i0", "instructions1", "instructions2", "trial",'subj_info', 'thanks'];
-  
+
   exp.data_trials = [];
   //make corresponding slides:
   exp.slides = make_slides(exp);

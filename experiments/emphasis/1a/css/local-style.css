@@ -1,0 +1,70 @@
+.meaninglogo {
+	max-width: 500;
+	height: auto;
+	padding-top: 25px;
+}
+
+.mellow {
+	align-content: center;
+	max-width: 100;
+	height: auto;
+	padding-bottom: 25px;
+}
+
+.friends {
+	align-content: center;
+	max-width: 400;
+	height: auto;
+	padding-bottom: 25px;
+}
+
+.examples {
+	align-content: center;
+}
+
+.example {
+	display: inline-block;
+	max-width: 160;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.slider {
+  /* default is width 400 and margin 10 */
+	width: 400;
+	margin: 10px;
+}
+
+.progress {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    margin-right: -133;
+}
+
+.slide {
+    padding-top: 36px;
+}
+
+.long_form {
+    padding-top: 36px;
+}
+
+.wrapper {
+	align-content: center;
+	padding-top: 36px;
+}
+
+.picture
+{
+    display: inline-block;
+    padding: 50px 50px 50px 50px;
+		border: solid;
+}
+
+.picture:empty{
+    border: none;
+}
