@@ -33,8 +33,9 @@
 
 .friends {
 	align-content: center;
-	max-width: 400;
+	max-width: 200;
 	height: auto;
+	padding-top: 25px;
 	padding-bottom: 25px;
 }
 

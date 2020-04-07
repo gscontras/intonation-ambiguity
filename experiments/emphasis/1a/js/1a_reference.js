@@ -35,11 +35,11 @@ function make_slides(f) {
                     },
                   {
                     utterance: "surface",
-                    every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "Exactly two of the marbles are red.", no: "All of the marbles are red."
+                    every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "There’s a marble that isn’t red.", no: "All of the marbles are red."
                   },
                   {
                     utterance: "inverse",
-                    every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It's not true that exactly one marble is red.", no: "Some of the marbles are red."
+                    every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It’s not the case that there’s a marble that’s red.", no: "Some of the marbles are red."
                   }
         ])
         ,
@@ -74,11 +74,12 @@ function make_slides(f) {
                 $(".picture").unbind("click");
                 $(".picture").empty();
                 t2 = new Date();
-                var rt = Math.round((t2.getTime() - t1.getTime())/100)/10;
+                var rt = ((t2.getTime() - t1.getTime())/100)/10;
+                // var rt = Math.round((t2.getTime() - t1.getTime())/100)/10;
                 exp.data_trials.push({
                   "choice": choice,
                   "rt": rt,
-                  //"choice": $(this).attr('id'),
+                  "side": $(this).attr('id'),
                   "utterance": stim.utterance,
                   "modifier": exp.condition
                 });
