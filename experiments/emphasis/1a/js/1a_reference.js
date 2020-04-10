@@ -35,11 +35,11 @@ function make_slides(f) {
                     },
                   {
                     utterance: "surface",
-                    every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "There’s a marble that isn’t red.", no: "All of the marbles are red."
+                    every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "There's a marble that isn't red.", no: "All of the marbles are red."
                   },
                   {
                     utterance: "inverse",
-                    every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It’s not the case that there’s a marble that’s red.", no: "Some of the marbles are red."
+                    every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It's not the case that there's a marble that's red.", no: "Some of the marbles are red."
                   }
         ])
         ,
@@ -64,15 +64,22 @@ function make_slides(f) {
           //  var set = stim[label];
           var version = shuffleImages[i]
           $("#"+ label).hover(function(){
-                                        $(this).fadeTo(10,0.5);
-                                        },
-                                        function(){
-                                        $(this).fadeTo(10,1);
-                                        });
+            $(this).fadeTo(10,0.5);
+          },
+          function(){
+            $(this).fadeTo(10,1);
+          });
+
+          // $("#"+ label).hover(function(){
+          //   $(this).fadeToggle(10,0.5);
+          // });
+
+
           $("#"+ label).click(function(choice) {
               return function() {
                 $(".picture").unbind("click");
                 $(".picture").empty();
+                $(".picture").fadeTo(10,1);
                 t2 = new Date();
                 var rt = ((t2.getTime() - t1.getTime())/100)/10;
                 // var rt = Math.round((t2.getTime() - t1.getTime())/100)/10;
@@ -160,6 +167,7 @@ function init() {
   //blocks of the experiment:
   //exp.structure=["trial",'thanks'];
 
+  // exp.structure=["trial", 'subj_info', 'thanks'];
   exp.structure=["i0", "instructions1", "instructions2", "trial", 'subj_info', 'thanks'];
 
   exp.data_trials = [];
