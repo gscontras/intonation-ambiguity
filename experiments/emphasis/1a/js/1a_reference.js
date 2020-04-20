@@ -2,6 +2,12 @@ var t1, t2;
 
 var utterance = ["amb", "surface", "inverse"]
 
+function progress(){
+  var trial = exp.data_trials.length;
+	var pct = Math.round(100*(trial + exp.slideIndex+1)/(exp.nQs+1));
+	$('.progress-bar').css('width', pct+'%').attr('aria-valuenow', pct);
+}
+
 function make_slides(f) {
   var   slides = {};
 
@@ -48,6 +54,7 @@ function make_slides(f) {
 
         present_handle: function(stim) {
           t1 = new Date();
+          progress();
 
           $(".sentence").html("\""+stim[exp.condition]+"\"");
 
@@ -111,7 +118,7 @@ function make_slides(f) {
       exp.subj_data = {
         language : $("#language").val(),
         enjoyment : $("#enjoyment").val(),
-        asses : $('input[name="assess"]:checked').val(),
+        assess : $('input[name="assess"]:checked').val(),
         age : $("#age").val(),
         gender : $("#gender").val(),
         education : $("#education").val(),

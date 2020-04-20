@@ -1,88 +1,45 @@
+body {
+	font-family: Verdana, sans-serif;
+	color:black;
+}
+
+/* img {
+  padding: 10px;
+} */
+
+.row.row-gutter{
+   margin-top: 20px;
+	 margin-left: 0px;
+}
+
 .meaninglogo {
-	max-width: 500;
-	height: auto;
-	padding-top: 25px;
+	width: 100%;
+	/* 120px 20px 120px 20px; */
 }
 
-.parent {
-  text-align: center;
-}
-.parent > ul {
-  display: inline-block;
-	text-align:left;
-	margin-top: -20px;
-	margin-bottom: 0px;
-}
-
-.textstyle {
-    background-color: #99ff99; /* Changing background color */
-		display: inline-block;
-    font-weight: bold; /* Making font bold */
-    border-radius: 20px; /* Making border radius */
-    width: auto; /* Making auto-sizable width */
-    height: auto; /* Making auto-sizable height */
-    padding: 10px 30px 10px 30px; /* Making space around letters */
+.button {
+	margin: 1em 0 1.25em 0;
 }
 
 .mellow {
-	align-content: center;
-	max-width: 100;
-	height: auto;
-	padding-bottom: 25px;
-}
-
-.friends {
-	align-content: center;
-	max-width: 200;
-	height: auto;
-	padding-top: 25px;
-	padding-bottom: 25px;
-}
-
-.examples {
-	align-content: center;
+	padding-bottom: 10px;
+	width: 80px;
 }
 
 .example {
-	display: inline-block;
-	max-width: 160;
-	height: auto;
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-bottom: 25px;
+	width: 175px;
+	padding: 10px 10px 20px 10px;
 }
 
-.slider {
-  /* default is width 400 and margin 10 */
-	width: 400;
-	margin: 10px;
+.friends {
+	width: 200px;
+	padding: 20px 10px 20px 10px;
 }
 
-.progress {
-    position: absolute;
-    top: 10px;
-    right: 50%;
-    margin-right: -133;
-}
-
-.slide {
-    padding-top: 36px;
-		padding-bottom: 36px;
-}
-
-.long_form {
-    padding-top: 36px;
-}
-
-.wrapper {
-	align-content: center;
-	padding-top: 36px;
-}
-
-.picture
-{
-    display: inline-block;
-    padding: 50px 50px 50px 50px;
+.picture {
+    margin: 40px 40px 40px 40px;
+		display: inline-block;
+		padding: 35px 35px 35px 35px;
 		border: solid;
 }
 

@@ -11,10 +11,10 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 
 <!-- Set the title -->
-<title>Marbles in a Box</title>
+<title>And this one is for all the marbles</title>
 
 <!--JS-->
-<!-- external general utilities: jquery and bootstrap 3 -->
+<!-- external general utilities -->
 <script src="../_shared/js/jquery-1.11.1.min.js "></script>
 <script src="../_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
 <script src="../_shared/js/underscore-min.js"></script>
@@ -29,14 +29,14 @@
 <script src="../_shared/js/browserCheck.js"></script>
 <script src="../_shared/js/utils.js"></script>
 
-<!--CSS: bootstrap and local-->
-<!-- <link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/> -->
+<!--CSS-->
+<link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
 <!-- <link href="../_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/> -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/local-style.css">
+<link href="css/local-style.css" rel="stylesheet" type="text/css"/>
 
 <!-- experiment file -->
-<script src="js/1a_reference.js"></script>
+<script src="js/1b_endorsement.js"></script>
 
 <!-- check unique turkers -->
 <script src="../_shared/js/uniqueturker.js"></script>
@@ -44,7 +44,7 @@
 <!-- preload stimuli images -->
 <script>
   var myimages=new Array(
-    "../1a/expt-files/images/ambeverysurface.png","../1a/expt-files/images/surfaceeverysurface.png","../1a/expt-files/images/inverseeverysurface.png","../1a/expt-files/images/ambeveryinverse.png","../1a/expt-files/images/surfaceeveryinverse.png","../1a/expt-files/images/inverseeveryinverse.png","../1a/expt-files/images/ambsomesurface.png","../1a/expt-files/images/surfacesomesurface.png","../1a/expt-files/images/inversesomesurface.png","../1a/expt-files/images/ambsomeinverse.png","../1a/expt-files/images/surfacesomeinverse.png","../1a/expt-files/images/inversesomeinverse.png","../1a/expt-files/images/ambonesurface.png","../1a/expt-files/images/surfaceonesurface.png","../1a/expt-files/images/inverseonesurface.png","../1a/expt-files/images/amboneinverse.png","../1a/expt-files/images/surfaceoneinverse.png","../1a/expt-files/images/inverseoneinverse.png","../1a/expt-files/images/ambnosurface.png","../1a/expt-files/images/surfacenosurface.png","../1a/expt-files/images/inversenosurface.png","../1a/expt-files/images/ambnoinverse.png","../1a/expt-files/images/surfacenoinverse.png","../1a/expt-files/images/inversenoinverse.png"
+    "../1b/expt-files/images/howQUD.png","../1b/expt-files/images/allQUD.png","../1b/expt-files/images/noneQUD.png","../1b/expt-files/images/oneQUD.png"
   )
 
   function preloadimages(){
@@ -63,7 +63,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-         <a class="navbar-brand">Marbles in a Box</a>
+         <a class="navbar-brand">And this one is for all the marbles</a>
       </div>
 
       <div class="nav navbar-inner navbar-right">
@@ -82,11 +82,9 @@
 
       <!-- slide with logo, task, and legal information -->
       <div class="slide" id="i0">
-        <img class="meaninglogo img-rounded" src="../1a/expt-files/images/meaningLab.png"></img>
-        <!-- <div class="row row-gutter"> -->
+        <img class="meaninglogo img-rounded" src="../1b/expt-files/images/meaningLab.png"></img>
         <h3>Task</h3>
-        <!-- </div> -->
-        <p>You will see a series of images and be asked some questions about them. The HIT should take about two minutes. Please pay attention. Thank you!</p>
+        <p>You will see a story and be asked to interpret a sentence about it. The HIT should take about two minutes. Please pay attention. Thank you!</p>
         <button class="btn btn-primary" id="start_button" type="button">Start Experiment</button>
         <h4>Legal information</h4>
         <p class="small">By answering the following questions, you are participating in a study being performed by language scientists in the Department of Language Science at UC Irvine. If you have questions about this research, please contact Noa Attali at <a href="mailto://nattali@uci.edu">nattali@uci.edu</a> or Greg Scontras, at gscontra@uci.edu. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>
@@ -97,12 +95,15 @@
         <h3>Instructions</h3>
         <p>Meet Mellow.</p>
         <p>
-          <img class="mellow" src="../1a/expt-files/images/mellow.png"></img>
+          <img class="mellow" src="../1b/expt-files/images/mellow.png"></img>
         </p>
-        <p>Mellow is putting marbles in boxes. Boxes and marbles look like this:</p>
+        <p>Mellow has a collection of red and blue marbles:</p>
         <p>
-          <img class="example" src="../1a/expt-files/images/boxes.png"></img>
-          <img class="example" src="../1a/expt-files/images/marbles.png"></img>
+          <img class="example" src="../1b/expt-files/images/marbles.png"></img>
+        </p>
+        <p>Mellow put three marbles into a box.</p>
+        <p>
+          <img class="example2" src="../1b/expt-files/images/mysterybox.png"></img>
         </p>
         <button class="btn btn-primary" onclick="_s.button()">Continue</button>
       </div>
@@ -110,26 +111,45 @@
       <!-- slide with instructions -->
       <div class="slide text-center" id="instructions2">
         <h3>Instructions (continued)</h3>
+        <p>Meet Bluesy and Rose.</p>
         <p>
-          <img class="friends" src="../1a/expt-files/images/mellowandbluesy.png"></img>
+          <img class="example" src="../1b/expt-files/images/bluesyandrose.png"></img>
         </p>
-        <p>After putting marbles into a box, Mellow tells her friend, Bluesy, about the box of marbles.</p>
-        <div class="alert alert-success"><b>Your task is to help Bluesy decide what Mellow meant.</b></div>
+        <p>They made a bet on what marbles Mellow put in the box.</p>
+        <p>You will see the bet and Mellow’s description of the marbles she put in the box.</p>
+        <div class="alert alert-success"><b>Your task is to indicate who won the bet, based on what you think Mellow meant.</b></div>
         <button class="btn btn-primary" onclick="_s.button()">Continue</button>
       </div>
 
-      <!-- slide for 3 trials -->
-      <div class="slide text-center" id="trial">
+      <!-- trial slide -->
+      <div class="slide text-center" id="multi_slider">
+        <p class="context" style="margin:20px 0 20px 0">{{}}</p>
+
+        <div class="visual"></div>
+
+        <p style="margin:20px 0 20px 0" class="QUD">{{}}</p>
+
         <p>Mellow said:</p>
-        <h2 class="sentence">{{}}</h2>
-        <div class="row row-gutter">
-          <p>Click on the box of marbles you think Mellow was talking about:</p>
-        </div>
+        <h3 class="amb">{{}}</h3>
+
+        <p style="margin:40px 0 20px 0">What did Mellow mean?</p>
+        <table id="multi_slider_table" class="slider_table">
+            <tr>
+              <td></td>
+              <td class="left small">definitely not</td>
+              <td class="right small">definitely</td>
+            </tr>
+        </table>
+
+        <p style="margin-top:40px">Who won the bet?</p>
+        <label><input type="radio" style="margin:10px 2px 10px 10px" name="sense" value="Bluesy"/>Bluesy</label>
+        <label><input type="radio" style="margin:10px 2px 10px 10px" name="sense" value="Rose"/>Rose</label>
 
         <div>
-          <div class="picture" id="Image1"></div>
-          <div class="picture" id="Image2"></div>
+          <button class="btn btn-primary" onclick="_s.button()">Continue</button>
         </div>
+
+        <div class="err">Please adjust all the sliders before continuing.</div>
       </div>
 
       <!-- slide with survey questions -->
@@ -198,7 +218,7 @@
       <!-- exit slide -->
       <div class="slide js text-center" id="thanks">
         <h3>Thanks for your time!</h3>
-        <div><img class="friends" src="../1a/expt-files/images/thanks.png"></img></div>
+        <div><img class="friends" src="../1b/expt-files/images/thanks.png"></img></div>
       </div>
 
     </div>
