@@ -31,22 +31,22 @@ table {
 }
 
 .mellow {
-	padding-bottom: 10px;
-	width: 80px;
+	padding: 20px 30px 20px 30px;
+	width: 120px;
 }
 
 .example {
 	width: 200px;
-	padding: 10px 10px 20px 10px;
+	padding: 20px 30px 20px 30px;
 }
 
 .example2 {
-	width: 100px;
-	padding: 10px 10px 20px 10px;
+	width: 140px;
+	padding: 20px 10px 20px 10px;
 }
 
 .friends {
-	width: 400px;
+	width: 200px;
 	padding: 20px 10px 20px 10px;
 }
 
