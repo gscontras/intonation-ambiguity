@@ -32,8 +32,8 @@ function make_slides(f) {
     name : "multi_slider",
 
     present : [{
-          amb: {unemphasized: {every: "Every marble isn't red.", some: "Some marble isn't red.", one: "One marble isn't red.", no: "No marble isn't red."}, emphasized: {every: "<em><strong>EVERY</strong></em> marble isn't red.", some: "<em><strong>SOME</strong></em> marble isn't red.", one: "<em><strong>ONE</strong></em> marble isn't red.", no: "<em><strong>NO</strong></em> marble isn't red."}},
-          paraphrase: {surface: {every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "There's a marble that isn't red.", no: "All of the marbles are red."}, inverse: {every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It's not the case that there's a marble that's red.", no: "Some of the marbles are red."}},
+          amb: {mixed: {unemphasized: {every: "Every marble isn't red.", some: "Some marble isn't red.", one: "One marble isn't red.", no: "No marble isn't red."}, emphasized: {every: "<em><strong>EVERY</strong></em> marble isn't red.", some: "<em><strong>SOME</strong></em> marble isn't red.", one: "<em><strong>ONE</strong></em> marble isn't red.", no: "<em><strong>NO</strong></em> marble isn't red."}}, control: {unemphasized: {every: "Every marble isn't red.", some: "Some marble isn't red.", one: "One marble isn't red.", no: "No marble isn't red."}, emphasized: {every: "Every marble isn't red.", some: "Some marble isn't red.", one: "One marble isn't red.", no: "No marble isn't red."}}},
+          paraphrase: {surface: {every: "None of the marbles are red.", some: "Not all of the marbles are red.", one: "There's a single marble that isn't red.", no: "All of the marbles are red."}, inverse: {every: "Not all of the marbles are red.", some: "None of the marbles are red.", one: "It's not the case that there's a single red marble.", no: "Some of the marbles are red."}},
         }],
 
       present_handle : function(stim) {
@@ -42,9 +42,9 @@ function make_slides(f) {
         this.stim = stim;
         exp.emph = _.sample(["unemphasized","emphasized"])
         exp.quantifier = _.sample(["every","some","one","no"]);
-        exp.QUD = _.sample(["exact", "all", "none", "one"]);
+        exp.condition = _.sample(["control", "mixed", "mixed"]);
 
-        $(".amb").html("\""+stim["amb"][exp.emph][exp.quantifier]+"\"");
+        $(".amb").html("\""+stim["amb"][exp.condition][exp.emph][exp.quantifier]+"\"");
 
         this.sentence_types = _.shuffle(["surface","inverse"]);
         var sentences = {
@@ -92,6 +92,7 @@ function make_slides(f) {
             "trial_type" : "multi_slider",
             "sentence_type" : sentence_type,
             "bottom_slider": i,
+            "condition": exp.condition,
             "response" : exp.sliderPost[i],
             "quantifier": exp.quantifier,
             "QUD": exp.QUD,
@@ -99,6 +100,11 @@ function make_slides(f) {
           });
         }
       },
+
+      button : function() {
+        exp.go();
+      }
+      
     });
 
 
@@ -153,7 +159,7 @@ function init() {
 
   exp.trials = [];
   exp.catch_trials = [];
-  exp.condition = [];
+  exp.condition = _.sample(["control", "mixed", "mixed"]);
   exp.system = {
       Browser : BrowserDetect.browser,
       OS : BrowserDetect.OS,

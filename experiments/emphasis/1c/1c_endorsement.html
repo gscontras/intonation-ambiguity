@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+<!-- Set the title -->
+<title>And this one is for all the marbles</title>
+
+<!--JS-->
+<!-- external general utilities -->
+<script src="../_shared/js/jquery-1.11.1.min.js "></script>
+<script src="../_shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+<script src="../_shared/js/underscore-min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- cocolab experiment logic -->
+<script src="../_shared/js/exp-V2.js"></script>
+<script src="../_shared/js/stream-V2.js"></script>
+
+<!-- cocolab general utilities -->
+<script src="../_shared/js/mmturkey.js "></script>
+<script src="../_shared/js/browserCheck.js"></script>
+<script src="../_shared/js/utils.js"></script>
+
+<!--CSS-->
+<link href="../_shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+<!-- <link href="../_shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/> -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/local-style.css" rel="stylesheet" type="text/css"/>
+
+<!-- experiment file -->
+<script src="js/1c_endorsement.js"></script>
+
+<!-- check unique turkers -->
+<script src="../_shared/js/uniqueturker.js"></script>
+
+</head>
+
+<body onload="init();">
+
+  <!-- fluid-width header with title (left) and progress bar (right) -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+         <a class="navbar-brand">And this one is for all the marbles</a>
+      </div>
+
+      <div class="nav navbar-inner navbar-right">
+        <div class="nav navbar-text">Progress</div>
+        <div class="nav navbar-text text-center progress" style="width: 200px;">
+          <div class="progress-bar" width="0%"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- specify that HIT takes up middle 2/3rds of screen with a grey border -->
+  <div class="container panel panel-default col-md-8 col-md-offset-2">
+    <div class="panel-body">
+      <noscript>This task requires JavaScript.</noscript>
+
+      <!-- slide with logo, task, and legal information -->
+      <div class="slide" id="i0">
+        <img class="meaninglogo img-rounded" src="../1b/expt-files/images/meaningLab.png"></img>
+        <h3>Task</h3>
+        <p>You will see a story and be asked to interpret a sentence about it. The HIT should take about two minutes. Please pay attention. Thank you!</p>
+        <button class="btn btn-primary" id="start_button" type="button">Start Experiment</button>
+        <h4>Legal information</h4>
+        <p class="small">By answering the following questions, you are participating in a study being performed by language scientists in the Department of Language Science at UC Irvine. If you have questions about this research, please contact Noa Attali at <a href="mailto://nattali@uci.edu">nattali@uci.edu</a> or Greg Scontras, at gscontra@uci.edu. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>
+      </div>
+
+      <!-- slide with instructions -->
+      <div class="slide text-center" id="instructions1">
+        <h3>Instructions</h3>
+        <p>Meet Mellow. She has a collection of red and blue marbles:</p>
+        <p>
+          <img class="mellow" src="../1b/expt-files/images/mellow.png"></img>
+          <img class="example" src="../1b/expt-files/images/marbles.png"></img>
+        </p>
+        <p>Mellow put three marbles into a box.</p>
+        <p>
+          <img class="example2" src="../1b/expt-files/images/mysterybox.png"></img>
+        </p>
+        <button class="btn btn-primary" onclick="_s.button()">Continue</button>
+      </div>
+
+      <!-- slide with instructions -->
+      <div class="slide text-center" id="instructions2">
+        <h3>Instructions (continued)</h3>
+        <p>
+          <img class="friends" src="../1a/expt-files/images/mellowandbluesy.png"></img>
+        </p>
+        <p>After putting marbles into a box, Mellow tells her friend, Bluesy, about the box of marbles.</p>
+        <div class="alert alert-success"><b>Your task is to help Bluesy decide what Mellow meant.</b></div>
+        <button class="btn btn-primary" onclick="_s.button()">Continue</button>
+      </div>
+
+      <!-- trial slide -->
+      <div class="slide text-center" id="multi_slider">
+        <p>Mellow said:</p>
+        <h3 class="amb">{{}}</h3>
+
+        <p style="margin:40px 0 20px 0">What did Mellow mean?</p>
+        <table id="multi_slider_table" class="slider_table">
+            <tr>
+              <td></td>
+              <td class="left small">definitely not</td>
+              <td class="right small">definitely</td>
+            </tr>
+        </table>
+
+        <div>
+          <button class="btn btn-primary" onclick="_s.button()">Continue</button>
+        </div>
+
+        <div class="err">Please adjust all the sliders before continuing.</div>
+      </div>
+
+      <!-- slide with survey questions -->
+      <div class="slide" id="subj_info">
+        <h3>Additional information</h3>
+        <p>Answering these questions is optional, but will help us understand your answers.</p>
+
+        <div class="form-group">
+          <label class="form-label">Did you read the instructions and do you think you did the HIT correctly?</label>
+            <div class="radio"><label><input type="radio"  name="assess" value="No"/>No</label></div>
+            <div class="radio"><label><input type="radio"  name="assess" value="Yes"/>Yes</label></div>
+            <div class="radio"><label><input type="radio"  name="assess" value="Confused"/>I was confused</label></div>
+        </div>
+
+        <div class="form-group">
+          <label for="gender" class="form-label">Gender:</label>
+            <select class="form-control" name="gender" id="gender">
+              <option value="-1"></option>
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+              <option value="2">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" name="age" id="age">
+        </div>
+
+        <div class="form-group">
+          <label for="education" class="form-label">Level Of Education:</label>
+						<select class="form-control" name="education" id="education">
+              <option value="-1"></option>
+              <option value="0">Some High School</option>
+              <option value="1">Graduated High School</option>
+              <option value="2">Some College</option>
+              <option value="3">Graduated College</option>
+              <option value="4">Hold a higher degree</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="language" class="form-label">Native Language (the language(s) spoken at home when you were a child):</label>
+            <input type="text" class="form-control" name="language" id="language">
+        </div>
+
+        <div class="form-group">
+					<label for="enjoyment" class="form-label">Did you enjoy the hit?</label>
+					<select class="form-control" name="enjoyment" id="enjoyment">
+            <option value="-1"></option>
+						<option value="0">Worse than the Average HIT</option>
+						<option value="1">An Average HIT</option>
+						<option value="2">Better than average HIT</option>
+					</select>
+				</div>
+
+        <div class="form-group">
+				  <label for="comments" class="form-label">We would be interested in any comments you have about this experiment. Please type them here:</label>
+				  <textarea class="form-control" rows="5" name="comments" id="comments"></textarea>
+				</div>
+
+        <p>Click below to submit HIT.</p>
+        <p><button class="btn btn-primary" onclick="_s.submit()">Submit</button></p>
+      </div>
+
+      <!-- exit slide -->
+      <div class="slide js text-center" id="thanks">
+        <h3>Thanks for your time!</h3>
+        <div><img class="friends" src="../1b/expt-files/images/thanks.png"></img></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
