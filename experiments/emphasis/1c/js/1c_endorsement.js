@@ -101,13 +101,28 @@ function make_slides(f) {
     },
 
     button : function() {
-      if (exp.sliderPost.length < this.n_sliders) {
-        $(".err").show();
-      } else {
-        this.log_responses();
-        _stream.apply(this); //use _stream.apply(this); if and only if there is "present" data.
+      var ok_to_go_on = true
+      for (var i=0; i<this.n_sliders; i++) {
+        if (exp.sliderPost[i]==undefined){
+          ok_to_go_on = false
+        }
       }
+      if (ok_to_go_on) {
+           this.log_responses();
+           _stream.apply(this);
+          } else {
+           $(".err").show();
+          }
     },
+
+    // button : function() {
+    //   if (exp.sliderPost.length < this.n_sliders) {
+    //     $(".err").show();
+    //   } else {
+    //     this.log_responses();
+    //     _stream.apply(this); //use _stream.apply(this); if and only if there is "present" data.
+    //   }
+    // },
 
     init_sliders : function(sentence_types) {
       for (var i=0; i<sentence_types.length; i++) {
