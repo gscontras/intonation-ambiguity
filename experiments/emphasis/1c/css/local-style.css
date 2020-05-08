@@ -3,6 +3,16 @@ body {
 	color:black;
 }
 
+.bic {
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.prompt {
+	font-size: 25px;
+}
+
 /* .slide {
 	text-align: center;
 } */
@@ -36,13 +46,13 @@ table {
 }
 
 .example {
-	width: 200px;
+	width: 240px;
 	padding: 20px 30px 20px 30px;
 }
 
 .example2 {
-	width: 140px;
-	padding: 20px 10px 20px 10px;
+	width: 100px;
+	padding: 10px 10px 20px 10px;
 }
 
 .friends {

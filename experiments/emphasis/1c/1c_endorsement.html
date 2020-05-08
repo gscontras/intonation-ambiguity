@@ -11,7 +11,7 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 
 <!-- Set the title -->
-<title>And this one is for all the marbles</title>
+<title>Mystery Box O' Marbles</title>
 
 <!--JS-->
 <!-- external general utilities -->
@@ -49,7 +49,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-         <a class="navbar-brand">And this one is for all the marbles</a>
+         <a class="navbar-brand">Mystery Box O' Marbles</a>
       </div>
 
       <div class="nav navbar-inner navbar-right">
@@ -68,9 +68,9 @@
 
       <!-- slide with logo, task, and legal information -->
       <div class="slide" id="i0">
-        <img class="meaninglogo img-rounded" src="../1b/expt-files/images/meaningLab.png"></img>
+        <img class="meaninglogo img-rounded" src="../1c/expt-files/images/meaningLab.png"></img>
         <h3>Task</h3>
-        <p>You will see a story and be asked to interpret a sentence about it. The HIT should take about two minutes. Please pay attention. Thank you!</p>
+        <p>You will see a story and be asked to interpret several sentences. The HIT should take about two minutes. Please pay attention. Thank you!</p>
         <button class="btn btn-primary" id="start_button" type="button">Start Experiment</button>
         <h4>Legal information</h4>
         <p class="small">By answering the following questions, you are participating in a study being performed by language scientists in the Department of Language Science at UC Irvine. If you have questions about this research, please contact Noa Attali at <a href="mailto://nattali@uci.edu">nattali@uci.edu</a> or Greg Scontras, at gscontra@uci.edu. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>
@@ -81,12 +81,12 @@
         <h3>Instructions</h3>
         <p>Meet Mellow. She has a collection of red and blue marbles:</p>
         <p>
-          <img class="mellow" src="../1b/expt-files/images/mellow.png"></img>
-          <img class="example" src="../1b/expt-files/images/marbles.png"></img>
+          <img class="mellow" src="../1c/expt-files/images/mellow.png"></img>
+          <img class="example" src="../1c/expt-files/images/marbles.png"></img>
         </p>
         <p>Mellow put three marbles into a box.</p>
         <p>
-          <img class="example2" src="../1b/expt-files/images/mysterybox.png"></img>
+          <img class="example2" src="../1c/expt-files/images/mysterybox.png"></img>
         </p>
         <button class="btn btn-primary" onclick="_s.button()">Continue</button>
       </div>
@@ -95,7 +95,7 @@
       <div class="slide text-center" id="instructions2">
         <h3>Instructions (continued)</h3>
         <p>
-          <img class="friends" src="../1a/expt-files/images/mellowandbluesy.png"></img>
+          <img class="friends" src="../1c/expt-files/images/mellowandbluesy.png"></img>
         </p>
         <p>After putting marbles into a box, Mellow tells her friend, Bluesy, about the box of marbles.</p>
         <div class="alert alert-success"><b>Your task is to help Bluesy decide what Mellow meant.</b></div>
@@ -105,7 +105,10 @@
       <!-- trial slide -->
       <div class="slide text-center" id="multi_slider">
         <p>Mellow said:</p>
-        <h3 class="amb">{{}}</h3>
+        <!-- <span id=“emph1”><span id=“quantifier”><span id=“emph2”><span id=“rest of sentence”> -->
+        <p class = "prompt">"<span class="amb"></span> marble isn't red."</p>
+
+        <!-- <h3 class="amb">{{}}</h3> -->
 
         <p style="margin:40px 0 20px 0">What did Mellow mean?</p>
         <table id="multi_slider_table" class="slider_table">
@@ -189,7 +192,7 @@
       <!-- exit slide -->
       <div class="slide js text-center" id="thanks">
         <h3>Thanks for your time!</h3>
-        <div><img class="friends" src="../1b/expt-files/images/thanks.png"></img></div>
+        <div><img class="friends" src="../1c/expt-files/images/thanks.png"></img></div>
       </div>
 
     </div>
